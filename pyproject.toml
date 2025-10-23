@@ -24,7 +24,7 @@ maintainers = [
 ]
 keywords = []
 readme = "README.rst"
-requires-python = ">=3.9,<4.0"
+requires-python = ">=3.10,<4.0"
 # Full list of classifiers: https://pypi.org/classifiers/
 classifier = [
     "Development Status :: 4 - Beta",
@@ -43,6 +43,15 @@ classifier = [
 # Core Dependencies
 # ------------------------------------------------------------------------------
 dependencies = [
+    "boto3>=1.35.99,<2.0.0", # Official AWS Python SDK
+    "boto3-dataclass[bedrock-runtime]>=1.40.0,<2.0.0", # Transform boto3 dictionaries into type-safe dataclasses with full autocomplete support.
+    "boto-session-manager>=1.8.1,<2.0.0",
+    "s3pathlib>=2.3.6,<3.0.0", # A pathlib-style object-oriented wrapper for Amazon S3
+    "strands-agents>=1.11.0,<2.0.0",
+    "strands-agents-tools>=0.2.12,<1.0.0",
+    "strands-agents-builder>=0.1.10,<1.0.0",
+    "bedrock-agentcore>=1.0.0,<2.0.0",
+    "bedrock-agentcore-starter-toolkit>=0.1.26,<1.0.0",
 ]
 
 # ------------------------------------------------------------------------------
@@ -61,7 +70,7 @@ dev = [
     "twine>=6.0.0,<7.0.0", # distribute package to PyPI
     "wheel>=0.45.0,<1.0.0", # build wheel package
     "build>=1.2.1,<2.0.0", # build source distribution
-    "rich>=13.8.1,<14.0.0", # pretty print
+    "rich>=14.0.0,<15.0.0", # pretty print
 ]
 
 # ------------------------------------------------------------------------------
